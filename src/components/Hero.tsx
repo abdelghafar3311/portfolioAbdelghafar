@@ -33,7 +33,7 @@ export const Hero = () => {
           <Button variant="outline" size="lg" className="gap-2" onClick={scrollToContact}>
             Contact Me
           </Button>
-          <a href="https://drive.usercontent.google.com/download?id=1M-EukaZ48wfMAvI2bggskGms6hrup0HS&export=download&authuser=0&confirm=t&uuid=06c9f734-b55d-4ac2-8da2-5dc8546a42fb&at=ALWLOp4En0rGU_gFvBNr40y6aE1X:1763025272297" download="https://drive.usercontent.google.com/download?id=1M-EukaZ48wfMAvI2bggskGms6hrup0HS&export=download&authuser=0&confirm=t&uuid=06c9f734-b55d-4ac2-8da2-5dc8546a42fb&at=ALWLOp4En0rGU_gFvBNr40y6aE1X:1763025272297">
+          <a href="https://drive.usercontent.google.com/download?id=1_MpVER6FoL7A_D8YwcKvqnG3-FMBI_bc&export=download&authuser=0&confirm=t&uuid=d1882527-d58d-4005-93fe-031187be3ed2&at=ALWLOp6HztK3-oLbJyRwK1uw5NQ3:1763033806393" download="Abdel-Ghafar Nagy CV">
             <Button variant="secondary" size="lg" className="gap-2">
               <Download className="h-5 w-5" />
               Download CV
