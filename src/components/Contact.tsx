@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Mail, Send, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const Contact = () => {
@@ -23,6 +23,24 @@ export const Contact = () => {
     setFormData({ name: "", email: "", message: "" });
   };
 
+  // function copy text
+  const copyText = (text: string, msg: string) => {
+    try {
+      navigator.clipboard.writeText(text);
+      toast({
+        title: "Copied!",
+        description: msg,
+      });
+    } catch (error) {
+      console.error("Failed to copy text:", error);
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to copy text.",
+      })
+    }
+  };
+
   return (
     <section id="contact" className="py-20 px-4 bg-card">
       <div className="container mx-auto max-w-4xl">
@@ -38,6 +56,16 @@ export const Contact = () => {
             <Card className="p-6 mb-6">
               <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
               <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Phone className="h-5 w-5 text-primary" />
+                  <a
+                    href="#contact"
+                    onClick={() => copyText("01030826549", "Phone number copied!")}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    01030826549
+                  </a>
+                </div>
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-primary" />
                   <a

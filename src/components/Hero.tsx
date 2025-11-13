@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Download } from "lucide-react";
-
+import { Github, Linkedin, Mail, Download, Phone } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 export const Hero = () => {
+  const { toast } = useToast()
   const scrollToProjects = () => {
     const element = document.getElementById("projects");
     element?.scrollIntoView({ behavior: "smooth" });
@@ -11,6 +12,23 @@ export const Hero = () => {
     const element = document.getElementById("contact");
     element?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const copyText = (text: string, msg: string) => {
+    try {
+      navigator.clipboard.writeText(text);
+      toast({
+        title: "Copied!",
+        description: msg,
+      })
+    } catch (error) {
+      console.error("Failed to copy text:", error);
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to copy text.",
+      })
+    }
+  }
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4">
@@ -65,6 +83,13 @@ export const Hero = () => {
           >
             <Mail className="h-6 w-6" />
           </a>
+          <p
+            onClick={() => copyText("01030826549", "Success Copy Number")}
+            className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+            title="01030826549"
+          >
+            <Phone className="h-6 w-6" />
+          </p>
         </div>
       </div>
     </section>
