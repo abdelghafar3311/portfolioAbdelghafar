@@ -6,7 +6,7 @@ export const About = () => {
     {
       icon: Code2,
       name: "Frontend",
-      items: ["React.js", "Next.js", "TypeScript", "TailwindCSS", "Bootstrap", "Axios"],
+      items: ["React.js", "Next.js", "Redux", "Redux-Toolkit", "TypeScript", "TailwindCSS", "Bootstrap", "Axios"],
     },
     {
       icon: Server,
