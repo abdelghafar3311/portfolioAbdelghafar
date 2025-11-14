@@ -6,7 +6,7 @@ import { projects } from "@/data/projects";
 import { projectImages } from "@/utils/projectImages";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-
+import GetIcon from "@/components/ui/GetIcon";
 const ProjectDetails = () => {
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
@@ -30,7 +30,7 @@ const ProjectDetails = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       <main className="pt-24 pb-12 px-4">
         <div className="container mx-auto max-w-4xl">
           <Link to="/" className="inline-block mb-8">
@@ -49,7 +49,7 @@ const ProjectDetails = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{project.title}</h1>
-          
+
           <div className="flex flex-wrap gap-2 mb-8">
             {project.techStack.map((tech) => (
               <span
@@ -77,6 +77,13 @@ const ProjectDetails = () => {
           </div>
 
           <div className="space-y-8">
+            {project.Note && (
+              <Card className="p-6">
+                <h2 className="text-2xl font-bold mb-4 flex items-center gap-1"> <GetIcon type={project.Note.type} /> {project.noteText} Note</h2>
+                <p className="text-muted-foreground leading-relaxed">{project.Note.noteText}</p>
+              </Card>
+            )}
+
             <Card className="p-6">
               <h2 className="text-2xl font-bold mb-4">Overview</h2>
               <p className="text-muted-foreground leading-relaxed">{project.description}</p>

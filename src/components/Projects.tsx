@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, FileText } from "lucide-react";
 import { projects } from "@/data/projects";
 import { projectImages } from "@/utils/projectImages";
+import GetIcon from "./ui/GetIcon";
+
+import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
 
 export const Projects = () => {
   return (
@@ -38,7 +41,12 @@ export const Projects = () => {
                   {project.title}
                 </h3>
                 <p className="text-muted-foreground mb-4">{project.shortDescription}</p>
-
+                {project.Note && (
+                  <Alert className="mb-3">
+                    <AlertTitle className="font-bold mb-2 text-primary flex items-center gap-1"> <GetIcon type={project.Note.type} /> NOTE</AlertTitle>
+                    <AlertDescription className="text-muted-foreground">{project.Note.noteText}</AlertDescription>
+                  </Alert>
+                )}
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.techStack.slice(0, 4).map((tech) => (
                     <span

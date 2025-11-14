@@ -11,6 +11,10 @@ export interface Project {
   image: string;
   demoUrl: string;
   githubUrl: string;
+  Note?: {
+    type: "warn" | "info" | "err";
+    noteText: string;
+  };
 }
 
 export const projects: Project[] = [
@@ -94,6 +98,11 @@ export const projects: Project[] = [
     image: "ReactCruds",
     demoUrl: "https://react-cruds.vercel.app/",
     githubUrl: "https://github.com/abdelghafar3311/React-Cruds",
+    Note: {
+      type: "info",
+      noteText:
+        "This project is based on the philosophy of desktop applications, Therefore, it should be run on computer screens, laptops, or tablets—that is, large and medium-sized screens. ",
+    },
   },
   {
     id: "Cruds",
@@ -120,6 +129,11 @@ export const projects: Project[] = [
     demoUrl:
       "https://github.com/abdelghafar3311/CRUDS-JS/archive/refs/heads/main.zip",
     githubUrl: "https://github.com/abdelghafar3311/CRUDS-JS",
+    Note: {
+      type: "warn",
+      noteText:
+        "This project will be downloaded as a compressed file containing its code. Please download and run it on your local device.",
+    },
   },
   {
     id: "LinkEX",
@@ -146,5 +160,10 @@ export const projects: Project[] = [
     demoUrl:
       "https://github.com/abdelghafar3311/Extension-Chrome--Links/archive/refs/heads/main.zip",
     githubUrl: "https://github.com/abdelghafar3311/Extension-Chrome--Links",
+    Note: {
+      type: "warn",
+      noteText:
+        "This project will be downloaded as a compressed file containing its code. Please download and run it on your local device.",
+    },
   },
 ];
