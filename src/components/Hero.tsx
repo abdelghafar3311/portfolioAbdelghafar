@@ -51,7 +51,7 @@ export const Hero = () => {
           <Button variant="outline" size="lg" className="gap-2" onClick={scrollToContact}>
             Contact Me
           </Button>
-          <a href="https://drive.google.com/file/d/1_MpVER6FoL7A_D8YwcKvqnG3-FMBI_bc/view?usp=sharing" download="Abdel-Ghafar Nagy CV">
+          <a href="https://drive.google.com/file/d/107mrWCuxnXrWHGM784X3mFXYXLgIHSmW/view?usp=drive_link" download="Abdel-Ghafar Nagy CV">
             <Button variant="secondary" size="lg" className="gap-2">
               <Download className="h-5 w-5" />
               Download CV
@@ -78,7 +78,7 @@ export const Hero = () => {
             <Linkedin className="h-6 w-6" />
           </a>
           <a
-            href="mailto:limegms6@gmail.com"
+            href="mailto:abdelghafar3311@gmail.com"
             className="text-muted-foreground hover:text-primary transition-colors"
           >
             <Mail className="h-6 w-6" />

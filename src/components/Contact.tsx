@@ -69,10 +69,10 @@ export const Contact = () => {
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-primary" />
                   <a
-                    href="mailto:limegms6@gmail.com"
+                    href="mailto:abdelghafar3311@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    limegms6@gmail.com
+                    abdelghafar3311@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
