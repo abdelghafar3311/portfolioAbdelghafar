@@ -126,14 +126,8 @@ export const projects: Project[] = [
     ],
     role: "Full-stack developer responsible for building the CRUD functionality, designing the interface, and implementing client-side interactions with JavaScript.",
     image: "CrudsJs",
-    demoUrl:
-      "https://github.com/abdelghafar3311/CRUDS-JS/archive/refs/heads/main.zip",
+    demoUrl: "https://cruds-js-ft5a.vercel.app/",
     githubUrl: "https://github.com/abdelghafar3311/CRUDS-JS",
-    Note: {
-      type: "warn",
-      noteText:
-        "This project will be downloaded as a compressed file containing its code. Please download and run it on your local device.",
-    },
   },
   {
     id: "LinkEX",
@@ -157,13 +151,7 @@ export const projects: Project[] = [
     ],
     role: "Full-stack developer responsible for building the link management system, implementing backup and restore functionality, and ensuring cross-device compatibility.",
     image: "LinkEX",
-    demoUrl:
-      "https://github.com/abdelghafar3311/Extension-Chrome--Links/archive/refs/heads/main.zip",
+    demoUrl: "https://extension-chrome-links-6frc.vercel.app/",
     githubUrl: "https://github.com/abdelghafar3311/Extension-Chrome--Links",
-    Note: {
-      type: "warn",
-      noteText:
-        "This project will be downloaded as a compressed file containing its code. Please download and run it on your local device.",
-    },
   },
 ];
